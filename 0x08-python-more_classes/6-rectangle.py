@@ -50,17 +50,17 @@ class Rectangle:
 
     def __str__(self):
         '''print rectangle'''
-        str = ''
+        new = ''
 
         if (self.__width == 0) or (self.__height == 0):
             return ''
         else:
             for i in range(self.__height):
                 for j in range(self.__width):
-                    str += '#'
-                str += '\n'
-            str = str[:-1]
-            return str
+                    new += '#'
+                new += '\n'
+            new = new[:-1]
+            return new
 
     def __repr__(self):
         '''returns string representation'''

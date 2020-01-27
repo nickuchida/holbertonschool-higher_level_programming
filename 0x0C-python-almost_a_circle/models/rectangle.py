@@ -2,9 +2,10 @@
 '''
 module rectangle
 '''
+from models.base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     '''class rectangle inherits from base'''
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
@@ -68,3 +69,7 @@ class Rectangle:
         if value < 0:
             raise ValueError('y must be >= 0')
         self.__y = value
+
+    def area(self):
+        '''returns area value of rectangle'''
+        return self.__width * self.__height

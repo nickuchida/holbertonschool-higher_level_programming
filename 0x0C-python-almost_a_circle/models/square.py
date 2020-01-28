@@ -13,7 +13,7 @@ class Square(Rectangle):
         '''initializes variables'''
         super().__init__(size, size, x, y, id)
 
-    def __str(self):
+    def __str__(self):
         '''str'''
         return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y,
                                                  self.width)

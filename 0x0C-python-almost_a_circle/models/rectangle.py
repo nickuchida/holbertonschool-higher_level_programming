@@ -83,7 +83,7 @@ class Rectangle(Base):
             for x in range(self.__x):
                 rectangle += ' '
             rectangle += '#' * self.__width + '\n'
-        print(rectangle)
+        print(rectangle[:-1])
 
     def __str__(self):
         '''print string representation of rectangle'''

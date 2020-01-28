@@ -28,3 +28,12 @@ class Square(Rectangle):
         '''setter'''
         self.width = value
         self.height = value
+
+    def to_dictionary(self):
+        '''returns dictionary representation'''
+        dicrep = {}
+        dicrep['id'] = self.id
+        dicrep['size'] = self.size
+        dicrep['x'] = self.x
+        dicrep['y'] = self.y
+        return dicrep

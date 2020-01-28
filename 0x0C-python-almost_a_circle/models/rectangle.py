@@ -91,7 +91,7 @@ class Rectangle(Base):
                                                        self.__y, self.__width,
                                                        self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''update rectangle'''
         if len(args) > 0:
             if len(args) == 0:
@@ -116,3 +116,14 @@ class Rectangle(Base):
                 self.height = args[2]
                 self.x = args[3]
                 self.y = args[4]
+        if len(kwargs) > 0:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']

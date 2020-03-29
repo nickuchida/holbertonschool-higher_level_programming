@@ -9,12 +9,11 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    statename = argv[4]
+    state = argv[4]
     db = MySQLdb.connect(host='localhost', port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute('SELECT * FROM states WHERE name = %s ORDER BY id'
-                , (statename, ))
+    cur.execute('SELECT * FROM states WHERE name = %s ORDER BY id', (state, ))
     result = cur.fetchall()
 
     for i in result:
